@@ -1,0 +1,33 @@
+.activity__header {
+    background-image: url('./images/activity-header.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.activity__header-icon {
+    display: block;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #b5eaf7;
+    background-image: url('./images/checkbox.svg');
+    -webkit-background-size: contain;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate( 20%, -20%);
+}
+
+.activity__header-text {
+    padding: 20px 35px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: white;
+}
