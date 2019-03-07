@@ -1,5 +1,5 @@
 .activity__header {
-    background-image: url('./images/activity-header.svg');
+    background-image: url('images/activity-header.svg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -15,7 +15,7 @@
     top: 0;
     right: 0;
     background-color: #b5eaf7;
-    background-image: url('./images/checkbox.svg');
+    background-image: url('images/checkbox.svg');
     -webkit-background-size: contain;
     background-size: 15px 15px;
     background-repeat: no-repeat;
@@ -30,4 +30,9 @@
     letter-spacing: 0.2px;
     text-align: center;
     color: white;
+}
+
+.js-rotate {
+    transform-origin: 50% 50%;
+    transform: rotate(180deg) translate( -20%, 20%);
 }

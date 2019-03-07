@@ -1,0 +1,52 @@
+.activity__autosend {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: darkgrey;
+    padding: 5px 0 6px;
+    height: 27px;
+    box-sizing: border-box;
+    text-align: center;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+}
+
+.activity__autosend-text {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #ffffff;
+    padding-left: 25px;
+    height: 13px;
+}
+
+.activity__autosend-text::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+    left: 0;
+    top: 2px;
+}
+
+.js-autosend-active {
+    background-color: #278697;
+}
+
+.js-autosend-text::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 2px;
+    position: absolute;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    left: 4px;
+    top: 6px;
+    transform: rotate(-45deg);
+
+}

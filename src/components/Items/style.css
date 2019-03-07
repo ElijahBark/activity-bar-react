@@ -1,4 +1,5 @@
 .activity__item {
+    width: 250px;
     background-color: #ffffff;
     position: relative;
     padding: 10px 43px 10px 20px;
@@ -79,4 +80,65 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+.js-autosend-popup {
+    height: 0;
+    overflow: hidden;
+}
+.js-already-send.js-autosend-popup {
+    height: auto;
+    overflow: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.js-already-send.js-autosend-popup span {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 12px;
+    color: #53ce8a;
+}
+
+.js-already-send.js-autosend-popup::after {
+    content: '';
+    display: block;
+    background-color: rgba(255,255,255,0.9);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 20px;
+    height: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: translate(100%, -50%);
+}
+
+.js-already-send.js-autosend-popup::before {
+    position: absolute;
+    right: 0;
+    content: '';
+    display: block;
+    width: 10px;
+    height: 5px;
+    border: 1px solid rgba(55,183,112, 0.2);
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg) translate(50%, 50%);
+    z-index: 10;
+}
+.activity__item-shell {
+    overflow: hidden;
+    width: 280px;
+    max-height: 120px;
+    transition: all 1s;
+}
+.js-hide-item {
+    max-height: 0;
 }

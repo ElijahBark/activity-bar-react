@@ -1,28 +1,50 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Header from './components/Header';
+import './style.css';
+import Others from "./components/Others";
+import Items from "./components/Items";
+import AutoSend from "./components/AutoSend";
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(props) {
+        super(props);
+        this.state = {
+            isActive: true,
+            isPopupActive: false,
+            isAutoSendActive: false
+        };
+
+        this.changeHeaderState = this.changeHeaderState.bind(this);
+        this.changePopupState = this.changePopupState.bind(this);
+        this.changeAutoSendState = this.changeAutoSendState.bind(this);
+    }
+
+    changeHeaderState() {
+        this.setState({isActive: !this.state.isActive});
+    };
+
+    changePopupState() {
+        this.setState({isPopupActive: !this.state.isPopupActive});
+    };
+
+    changeAutoSendState() {
+        this.setState({isAutoSendActive: !this.state.isAutoSendActive});
+    };
+
+    render() {
+        let {isActive, isPopupActive, isAutoSendActive} = this.state;
+        let {changeHeaderState, changePopupState,changeAutoSendState} = this;
+
+        return (
+            <section className={'activity'}>
+                <Header isActive={isActive} changeState={changeHeaderState}/>
+                <Others isPopupActive={isPopupActive} isActive={isActive} changePopupState={changePopupState}/>
+                <Items isAutoSendActive={isAutoSendActive} isActive={isActive}/>
+                <AutoSend isAutoSendActive={isAutoSendActive} changeAutoSendState={changeAutoSendState}/>
+            </section>
+        );
+    }
 }
 
 export default App;
