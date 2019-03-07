@@ -29,7 +29,7 @@ export default class Items extends Component {
             setTimeout(() => {
                 items.set(item.id, {...items.get(item.id), isSend: true});
                 this.setState({items});
-            }, +timeToDie - 4000);
+            }, +timeToDie - 10000);
 
             setTimeout(() => {
                 items.delete(item.id);
@@ -49,7 +49,7 @@ export default class Items extends Component {
                 setTimeout(() => {
                     items.set(item.id, {...items.get(item.id), isSend: true});
                     this.setState({items});
-                }, +timeToDie - 400);
+                }, +timeToDie - 10000);
 
                 setTimeout(() => {
                     items.delete(item.id);
