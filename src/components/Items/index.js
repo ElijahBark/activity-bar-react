@@ -1,5 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import {activityCreator} from '../../tools';
+import {COUNT_OF_ITEMS} from '../../config';
 import './style.css';
 import Item from "./Item";
 
@@ -13,8 +14,8 @@ export default class Items extends Component {
     }
 
     componentDidMount() {
-        this.createInitialItems(4);
-        this.startCreatingItems()
+        this.createInitialItems(COUNT_OF_ITEMS);
+        this.startCreatingItems();
     }
 
     createInitialItems(num) {
@@ -40,7 +41,7 @@ export default class Items extends Component {
     startCreatingItems(){
         const addNewItem = () => {
             let items = this.state.items;
-            if (items.size < 4) {
+            if (items.size < COUNT_OF_ITEMS) {
                 let item = activityCreator();
 
                 let timeToDie = Math.random() * 60000 + 60000;
@@ -58,7 +59,7 @@ export default class Items extends Component {
             }
             setTimeout(addNewItem, Math.random() * 60000 + 60000);
 
-        }
+        };
         setTimeout(addNewItem, Math.random() * 60000 + 60000);
     }
 
@@ -66,7 +67,7 @@ export default class Items extends Component {
         let items = this.state.items;
         items.delete(id);
         this.setState({items});
-    }
+    };
 
     render() {
         let {isAutoSendActive, isActive} = this.props;
