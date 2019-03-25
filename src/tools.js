@@ -68,3 +68,7 @@ export function activityCreator() {
 
     return activity;
 }
+
+export function makeTimeInterval(from, to) {
+ return Math.ceil(Math.random() * from + to)
+}

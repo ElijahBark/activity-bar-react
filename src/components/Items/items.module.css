@@ -94,7 +94,7 @@
     overflow: initial;
     display: flex;
     justify-content: center;
-    align-mains: center;
+    align-items: center;
     position: absolute;
     z-index: 100;
     top: 0;

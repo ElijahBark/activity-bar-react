@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {activityCreator} from '../../tools';
+import {activityCreator, makeTimeInterval} from '../../tools';
 import {COUNT_OF_ITEMS} from '../../config';
 import items from  './items.module.css';
 import Item from "./Item";
@@ -21,19 +21,7 @@ export default class Items extends Component {
     createInitialItems(num) {
         const items = new Map();
         for (let i = 0; i < num; i++) {
-            const item = activityCreator();
-            items.set(item.id, item);
-            const timeToDie = Math.random() * 60000 + 60000;
-
-            setTimeout(() => {
-                items.set(item.id, {...items.get(item.id), isSend: true});
-                this.setState({items});
-            }, +timeToDie - 10000);
-
-            setTimeout(() => {
-                items.delete(item.id);
-                this.setState({items});
-            }, timeToDie);
+            this.createSingleItem(items);
         }
         this.setState({items});
     }
@@ -42,26 +30,32 @@ export default class Items extends Component {
         const addNewItem = () => {
             const items = this.state.items;
             if (items.size < COUNT_OF_ITEMS) {
-                const item = activityCreator();
-
-                const timeToDie = Math.random() * 60000 + 60000;
-                setTimeout(() => {
-                    items.set(item.id, {...items.get(item.id), isSend: true});
-                    this.setState({items});
-                }, +timeToDie - 10000);
-
-                setTimeout(() => {
-                    items.delete(item.id);
-                    this.setState({items});
-                }, timeToDie);
-                items.set(item.id, item);
+                this.createSingleItem(items);
                 this.setState({items});
             }
-            setTimeout(addNewItem, Math.random() * 60000 + 60000);
+            setTimeout(addNewItem, makeTimeInterval(60000,60000));
 
         };
-        setTimeout(addNewItem, Math.random() * 60000 + 60000);
+        setTimeout(addNewItem, makeTimeInterval(60000,60000));
     }
+
+    createSingleItem = (items) => {
+        const item = activityCreator();
+        items.set(item.id, item);
+        const timeToDie = makeTimeInterval(60000,60000);
+
+        setTimeout(() => {
+            if(items.get(item.id)) {
+                items.set(item.id, {...items.get(item.id), isSend: true});
+            }
+            this.setState({items});
+        }, +timeToDie - 10000);
+
+        setTimeout(() => {
+            items.delete(item.id);
+            this.setState({items});
+        }, timeToDie);
+    };
 
     deleteItem = (id) => {
         const items = this.state.items;

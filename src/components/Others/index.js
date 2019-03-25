@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Popup from "./Popup";
+import {makeTimeInterval} from  '../../tools'
 import others from './others.module.css';
 
 class Others extends Component {
@@ -34,7 +35,7 @@ class Others extends Component {
 
     timer = () => {
         setTimeout(() => {
-            this.setState({num: Math.ceil(Math.random() * 20), timeToChange: Math.ceil(Math.random() * 20000 + 10000)});
+            this.setState({num: Math.ceil(Math.random() * 20), timeToChange: makeTimeInterval(20000,10000)});
             this.timer();
         }, this.state.timeToChange)
     };
