@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 import Popup from "./Popup";
-import './style.css'
+import './style.css';
 
 class Others extends Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Others extends Component {
     }
 
     render() {
-        let {isPopupActive, changePopupState, isActive} = this.props;
+        const {isPopupActive, changePopupState, isActive} = this.props;
         return <div className={isActive? 'activity__others-shell': 'activity__others-shell js-hide-others'}>
             <div onClick={changePopupState} className="activity__others">
                 <Popup isPopupActive={isPopupActive} changePopupState={changePopupState} num={this.state.num}/>

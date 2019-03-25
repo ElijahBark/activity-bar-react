@@ -19,7 +19,7 @@
     width: 15px;
     height: 15px;
     left: 0;
-    background-image: url('./images/man-icon.svg');
+    background-image: url('/images/man-icon.svg');
     -webkit-background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

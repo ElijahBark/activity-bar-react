@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import './style.css';
 
 const Header = ({isActive, changeState}) => {
         return <header onClick={changeState}  className="activity__header">
@@ -9,11 +9,11 @@ const Header = ({isActive, changeState}) => {
                 разного рода бесплатно!
             </p>
         </header>
-}
+};
 
 
 
-export default Header
+export default Header;
 
 
 

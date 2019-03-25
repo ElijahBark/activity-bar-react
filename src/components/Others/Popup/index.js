@@ -13,6 +13,6 @@ const Popup = ({isPopupActive, num, changePopupState}) => {
     );
 
 
-}
+};
 
 export default Popup;

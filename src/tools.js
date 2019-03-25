@@ -1,4 +1,5 @@
-import {COUNT_OF_STICKERS, COUNT_OF_ACTIVITIES, messages, persons, surprises} from './config'
+import {COUNT_OF_STICKERS, COUNT_OF_ACTIVITIES, messages, persons, surprises} from './config';
+
 //-------activities-kinds
 class Activity {
     constructor(person) {
@@ -26,7 +27,7 @@ class Surprise extends Activity {
         super(person);
         this.title = 'Отправьте сюрприз!';
         this.message = `${this.name} будет рада`;
-        let [kind, imageNum] = [...surprises[randomNumberTo(surprises.length - 1)]];
+        const [kind, imageNum] = [...surprises[randomNumberTo(surprises.length - 1)]];
         this.image = `images/surprises/${kind}/${randomNumberTo(imageNum)}.png`;
         this.type = 'surprise';
         this.id = this.type+ new Date().getMilliseconds() + this.logo;
@@ -40,7 +41,6 @@ class Greeting extends Activity {
         this.title = `${this.name} ждет приветствий!`;
         this.message = messages[randomNumberTo(messages.length - 1)];
         this.type = 'greeting';
-        this.image = '';
         this.id = this.type+ new Date().getMilliseconds() + this.logo;
     }
 }
@@ -51,8 +51,8 @@ function randomNumberTo(limit) {
 
 //--------activity-manipulation
 export function activityCreator() {
-    let num = randomNumberTo(COUNT_OF_ACTIVITIES - 1);
-    let person = persons[randomNumberTo(persons.length - 1)];
+    const num = randomNumberTo(COUNT_OF_ACTIVITIES - 1);
+    const person = persons[randomNumberTo(persons.length - 1)];
     let activity;
     switch (num) {
         case 0:

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css'
+import './style.css';
 
 const AutoSend = ({isAutoSendActive, changeAutoSendState}) => {
     return <div onClick={changeAutoSendState} className={isAutoSendActive? "activity__autosend  js-autosend-active" : "activity__autosend" }>
@@ -7,10 +7,10 @@ const AutoSend = ({isAutoSendActive, changeAutoSendState}) => {
             Автоматическая отправка
         </p>
     </div>
-}
+};
 
 
-export default AutoSend
+export default AutoSend;
 
 
 

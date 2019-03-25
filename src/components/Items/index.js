@@ -19,11 +19,11 @@ export default class Items extends Component {
     }
 
     createInitialItems(num) {
-        let items = new Map();
+        const items = new Map();
         for (let i = 0; i < num; i++) {
-            let item = activityCreator();
+            const item = activityCreator();
             items.set(item.id, item);
-            let timeToDie = Math.random() * 60000 + 60000;
+            const timeToDie = Math.random() * 60000 + 60000;
 
             setTimeout(() => {
                 items.set(item.id, {...items.get(item.id), isSend: true});
@@ -40,11 +40,11 @@ export default class Items extends Component {
 
     startCreatingItems(){
         const addNewItem = () => {
-            let items = this.state.items;
+            const items = this.state.items;
             if (items.size < COUNT_OF_ITEMS) {
-                let item = activityCreator();
+                const item = activityCreator();
 
-                let timeToDie = Math.random() * 60000 + 60000;
+                const timeToDie = Math.random() * 60000 + 60000;
                 setTimeout(() => {
                     items.set(item.id, {...items.get(item.id), isSend: true});
                     this.setState({items});
@@ -64,17 +64,17 @@ export default class Items extends Component {
     }
 
     deleteItem = (id) => {
-        let items = this.state.items;
+        const items = this.state.items;
         items.delete(id);
         this.setState({items});
     };
 
     render() {
-        let {isAutoSendActive, isActive} = this.props;
-        let arr = [...this.state.items.values()];
+        const {isAutoSendActive, isActive} = this.props;
+        const values = [...this.state.items.values()];
 
         return <div className={'activity__items'}>
-            {arr.map((activity, i) => <div key={i}
+            {values.map((activity, i) => <div key={i}
                 className={isActive || (i === 0) ? 'activity__item-shell' : 'activity__item-shell js-hide-item'}><Item
                 isAutoSendActive={isAutoSendActive} deleteItem={this.deleteItem}  activity={activity}/></div>)}
         </div>

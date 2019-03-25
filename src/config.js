@@ -2,6 +2,7 @@
 export const COUNT_OF_STICKERS = 9;
 export const COUNT_OF_ACTIVITIES = 3;
 export const COUNT_OF_ITEMS = 4;
+
 export const persons = [
     {
         name: "Nicole",
