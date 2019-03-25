@@ -1,13 +1,14 @@
 import React from 'react';
-import './style.css';
+import style from './autosend.module.css';
 
-const AutoSend = ({isAutoSendActive, changeAutoSendState}) => {
-    return <div onClick={changeAutoSendState} className={isAutoSendActive? "activity__autosend  js-autosend-active" : "activity__autosend" }>
-        <p className={isAutoSendActive? "activity__autosend-text text text__type_small js-autosend-text": "activity__autosend-text text text__type_small"}>
+const AutoSend = ({isAutoSendActive, changeAutoSendState}) => (
+     <div onClick={changeAutoSendState} className={isAutoSendActive? `${style.main} ${style.active} `: `${style.main}` }>
+        <p className={isAutoSendActive? `${style.text} text text__type_small ${style.checkbox}`:
+            `${style.text} text text__type_small`}>
             Автоматическая отправка
         </p>
-    </div>
-};
+     </div>
+);
 
 
 export default AutoSend;

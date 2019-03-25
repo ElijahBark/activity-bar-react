@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {activityCreator} from '../../tools';
 import {COUNT_OF_ITEMS} from '../../config';
-import './style.css';
+import items from  './items.module.css';
 import Item from "./Item";
 
 export default class Items extends Component {
@@ -73,10 +73,11 @@ export default class Items extends Component {
         const {isAutoSendActive, isActive} = this.props;
         const values = [...this.state.items.values()];
 
-        return <div className={'activity__items'}>
-            {values.map((activity, i) => <div key={i}
-                className={isActive || (i === 0) ? 'activity__item-shell' : 'activity__item-shell js-hide-item'}><Item
-                isAutoSendActive={isAutoSendActive} deleteItem={this.deleteItem}  activity={activity}/></div>)}
-        </div>
+        return <div>
+                    {values.map((activity, i) =>
+                        <div key={i} className={isActive || (i === 0) ? items.shell :`${items.shell} ${items.hide}`}>
+                            <Item isAutoSendActive={isAutoSendActive} deleteItem={this.deleteItem}  activity={activity}/>
+                        </div>)}
+                </div>
     }
 }

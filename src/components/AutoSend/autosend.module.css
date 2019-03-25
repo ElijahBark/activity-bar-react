@@ -1,4 +1,4 @@
-.activity__autosend {
+.main {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -12,7 +12,7 @@
 
 }
 
-.activity__autosend-text {
+.text {
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -21,7 +21,7 @@
     height: 13px;
 }
 
-.activity__autosend-text::before {
+.text::before {
     position: absolute;
     content: '';
     display: block;
@@ -30,14 +30,14 @@
     border: 1px solid #ffffff;
     border-radius: 3px;
     left: 0;
-    top: 2px;
+    top: 0;
 }
 
-.js-autosend-active {
+.active {
     background-color: #278697;
 }
 
-.js-autosend-text::after {
+.checkbox::after {
     content: '';
     display: block;
     width: 5px;
@@ -46,7 +46,7 @@
     border-left: 1px solid white;
     border-bottom: 1px solid white;
     left: 4px;
-    top: 6px;
+    top: 4px;
     transform: rotate(-45deg);
 
 }

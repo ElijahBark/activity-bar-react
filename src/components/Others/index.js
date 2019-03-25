@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Popup from "./Popup";
-import './style.css';
+import others from './others.module.css';
 
 class Others extends Component {
     constructor(props) {
@@ -15,11 +15,11 @@ class Others extends Component {
 
     render() {
         const {isPopupActive, changePopupState, isActive} = this.props;
-        return <div className={isActive? 'activity__others-shell': 'activity__others-shell js-hide-others'}>
-            <div onClick={changePopupState} className="activity__others">
-                <Popup isPopupActive={isPopupActive} changePopupState={changePopupState} num={this.state.num}/>
+        return <div className={isActive? others.shell: `${others.shell} ${others.hide}`}>
+            <div onClick={changePopupState} className={others.main}>
+                {isPopupActive? <Popup changePopupState={changePopupState} num={this.state.num}/>: null}
                 <p onClick={changePopupState}
-                   className="activity__others-text text text__type_small js-others-text">Еще {this.state.num} человек
+                   className={`${others.text} text text__type_small`}>Еще {this.state.num} человек
                     видит
                     ленту</p>
             </div>
@@ -31,9 +31,6 @@ class Others extends Component {
         this.timer();
     };
 
-    componentWillUnmount = () => {
-        clearTimeout(this.timer);
-    };
 
     timer = () => {
         setTimeout(() => {

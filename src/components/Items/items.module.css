@@ -1,4 +1,11 @@
-.activity__item {
+.shell {
+    overflow: hidden;
+    width: 280px;
+    max-height: 120px;
+    transition: all 1s;
+}
+
+.main {
     width: 250px;
     background-color: #ffffff;
     position: relative;
@@ -8,7 +15,7 @@
     border-bottom: 1px solid rgba(151,151,151, 0.1);
 }
 
-.activity__item:nth-of-type(3n+ 1)::before {
+.shell:nth-of-type(3n+ 1) .main::before {
     content: "";
     position:absolute;
     left:0;
@@ -19,16 +26,16 @@
     background-image: linear-gradient(to right, #55cf8b, rgba(225, 255, 237, 0.73) 83%, rgba(247, 255, 241, 0.73));
 }
 
-.activity__item:nth-of-type(3n+ 2) {
+.shell:nth-of-type(3n+ 2) .main {
     background-color: #daf3f7;
 }
 
-.activity__item_type_surprise,
-.activity__item_type_sticker {
+.surprise,
+.sticker {
     padding-left: 68px;
 }
 
-.activity__item::after {
+.main::after {
     content: '';
     position: absolute;
     right: 0;
@@ -43,20 +50,20 @@
     z-index: 100;
 }
 
-.activity__item-title {
+.title {
     line-height: 17px;
     font-family: 'Helvetica',sans-serif;
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-.activity__item-text {
+.text {
     opacity: 0.6;
     font-weight: 300;
     color: #323232
 }
 
-.activity__item-logo {
+.logo {
     position: absolute;
     right: 0;
     top: 50%;
@@ -67,7 +74,7 @@
     transform: translate(50%, -50%);
 }
 
-.activity__item-image {
+.image {
     display: block;
     position: absolute;
     left: 10px;
@@ -78,16 +85,16 @@
     height: 48px;
 }
 
-.js-autosend-popup {
+.popup {
     height: 0;
     overflow: hidden;
 }
-.js-already-send.js-autosend-popup {
+.send.popup {
     height: auto;
     overflow: initial;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-mains: center;
     position: absolute;
     z-index: 100;
     top: 0;
@@ -97,13 +104,13 @@
     background-color: rgba(255,255,255,0.9);
 }
 
-.js-already-send.js-autosend-popup span {
+.send.popup span {
     font-family: 'Helvetica', sans-serif;
     font-size: 12px;
     color: #53ce8a;
 }
 
-.js-already-send.js-autosend-popup::after {
+.send.popup::after {
     content: '';
     display: block;
     background-color: rgba(255,255,255,0.9);
@@ -117,7 +124,7 @@
     transform: translate(100%, -50%);
 }
 
-.js-already-send.js-autosend-popup::before {
+.send.popup::before {
     position: absolute;
     right: 0;
     content: '';
@@ -130,12 +137,7 @@
     transform: rotate(-45deg) translate(50%, 50%);
     z-index: 10;
 }
-.activity__item-shell {
-    overflow: hidden;
-    width: 280px;
-    max-height: 120px;
-    transition: all 1s;
-}
-.js-hide-item {
+
+.hide {
     max-height: 0;
 }
