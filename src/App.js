@@ -14,21 +14,17 @@ class App extends Component {
             isPopupActive: false,
             isAutoSendActive: false
         };
-
-        this.changeHeaderState = this.changeHeaderState.bind(this);
-        this.changePopupState = this.changePopupState.bind(this);
-        this.changeAutoSendState = this.changeAutoSendState.bind(this);
     }
 
-    changeHeaderState() {
+    changeHeaderState = () => {
         this.setState({isActive: !this.state.isActive});
     };
 
-    changePopupState() {
+    changePopupState = () => {
         this.setState({isPopupActive: !this.state.isPopupActive});
     };
 
-    changeAutoSendState() {
+    changeAutoSendState = () => {
         this.setState({isAutoSendActive: !this.state.isAutoSendActive});
     };
 

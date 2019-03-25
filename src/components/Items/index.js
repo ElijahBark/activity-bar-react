@@ -10,8 +10,6 @@ export default class Items extends Component {
         this.state = {
             items: new Map(),
         };
-
-        this.deleteItem = this.deleteItem.bind(this);
     }
 
     componentDidMount() {
@@ -64,7 +62,7 @@ export default class Items extends Component {
         setTimeout(addNewItem, Math.random() * 60000 + 60000);
     }
 
-    deleteItem(id) {
+    deleteItem = (id) => {
         let items = this.state.items;
         items.delete(id);
         this.setState({items});
