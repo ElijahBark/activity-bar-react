@@ -19,10 +19,7 @@
     width: 15px;
     height: 15px;
     left: 0;
-    background-image: url('/man-icon.svg');
-    -webkit-background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url('./man-icon.svg') no-repeat center;
 }
 
 .shell {
