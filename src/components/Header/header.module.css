@@ -1,5 +1,5 @@
 .main {
-    background-image: url('/images/activity-header.svg');
+    background-image: url('/activity-header.svg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -15,7 +15,7 @@
     top: 0;
     right: 0;
     background-color: #b5eaf7;
-    background-image: url('/images/checkbox.svg');
+    background-image: url('/checkbox.svg');
     -webkit-background-size: contain;
     background-size: 15px 15px;
     background-repeat: no-repeat;
