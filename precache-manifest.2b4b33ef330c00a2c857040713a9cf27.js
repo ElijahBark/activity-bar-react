@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/activity-bar-react/static/js/runtime~main.64aa675b.js"
   },
   {
-    "revision": "27d4a8d89b78bb43d96f",
-    "url": "/activity-bar-react/static/js/main.27d4a8d8.chunk.js"
+    "revision": "b7d62cb4a3bfe15af272",
+    "url": "/activity-bar-react/static/js/main.b7d62cb4.chunk.js"
   },
   {
     "revision": "1c6f0abd50cc0222251c",
     "url": "/activity-bar-react/static/js/2.1c6f0abd.chunk.js"
   },
   {
-    "revision": "27d4a8d89b78bb43d96f",
-    "url": "/activity-bar-react/static/css/main.f0a140f1.chunk.css"
+    "revision": "b7d62cb4a3bfe15af272",
+    "url": "/activity-bar-react/static/css/main.a4b7f938.chunk.css"
   },
   {
-    "revision": "df507d1b4e69686029f77a2b1a7584d5",
+    "revision": "2bc8d4606253e939e7ddb8a036f13a23",
     "url": "/activity-bar-react/index.html"
   }
 ];

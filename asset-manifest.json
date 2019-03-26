@@ -1,13 +1,13 @@
 {
-  "main.css": "/activity-bar-react/static/css/main.f0a140f1.chunk.css",
-  "main.js": "/activity-bar-react/static/js/main.27d4a8d8.chunk.js",
-  "main.js.map": "/activity-bar-react/static/js/main.27d4a8d8.chunk.js.map",
+  "main.css": "/activity-bar-react/static/css/main.a4b7f938.chunk.css",
+  "main.js": "/activity-bar-react/static/js/main.b7d62cb4.chunk.js",
+  "main.js.map": "/activity-bar-react/static/js/main.b7d62cb4.chunk.js.map",
   "runtime~main.js": "/activity-bar-react/static/js/runtime~main.64aa675b.js",
   "runtime~main.js.map": "/activity-bar-react/static/js/runtime~main.64aa675b.js.map",
   "static/js/2.1c6f0abd.chunk.js": "/activity-bar-react/static/js/2.1c6f0abd.chunk.js",
   "static/js/2.1c6f0abd.chunk.js.map": "/activity-bar-react/static/js/2.1c6f0abd.chunk.js.map",
   "index.html": "/activity-bar-react/index.html",
-  "precache-manifest.6143e05face4b71058e5332bbdadf7e2.js": "/activity-bar-react/precache-manifest.6143e05face4b71058e5332bbdadf7e2.js",
+  "precache-manifest.2b4b33ef330c00a2c857040713a9cf27.js": "/activity-bar-react/precache-manifest.2b4b33ef330c00a2c857040713a9cf27.js",
   "service-worker.js": "/activity-bar-react/service-worker.js",
-  "static/css/main.f0a140f1.chunk.css.map": "/activity-bar-react/static/css/main.f0a140f1.chunk.css.map"
+  "static/css/main.a4b7f938.chunk.css.map": "/activity-bar-react/static/css/main.a4b7f938.chunk.css.map"
 }
